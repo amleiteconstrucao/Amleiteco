@@ -1,0 +1,344 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A M LEITE CONSTRUÇÃO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .pattern-bg {
+            background-color: #1e3a8a;
+            background-image: radial-gradient(#3b82f6 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navegação -->
+    <nav class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i data-lucide="hard-hat" class="h-8 w-8 text-orange-500"></i>
+                    <span class="font-bold text-xl md:text-2xl tracking-tight">A M LEITE <span class="text-orange-500">CONSTRUÇÃO</span></span>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:text-orange-400 transition-colors font-medium">Início</a>
+                    <a href="#sobre" class="hover:text-orange-400 transition-colors font-medium">Sobre Nós</a>
+                    <a href="#produtos" class="hover:text-orange-400 transition-colors font-medium">Produtos</a>
+                    <a href="#contato" class="hover:text-orange-400 transition-colors font-medium">Contato</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-orange-400 focus:outline-none">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 pb-4">
+            <a href="#inicio" class="block px-4 py-2 hover:bg-blue-700 hover:text-orange-400">Início</a>
+            <a href="#sobre" class="block px-4 py-2 hover:bg-blue-700 hover:text-orange-400">Sobre Nós</a>
+            <a href="#produtos" class="block px-4 py-2 hover:bg-blue-700 hover:text-orange-400">Produtos</a>
+            <a href="#contato" class="block px-4 py-2 hover:bg-blue-700 hover:text-orange-400">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pattern-bg text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left flex flex-col md:flex-row items-center">
+            <div class="md:w-2/3">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Construindo o seu futuro com <span class="text-orange-400">qualidade</span> e <span class="text-orange-400">confiança</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl">
+                    A M LEITE CONSTRUÇÃO oferece os melhores materiais para a sua obra. Preço justo, atendimento especializado e compromisso com o seu projeto.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#produtos" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1 text-center">
+                        Ver Produtos
+                    </a>
+                    <a href="#contato" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition-colors text-center">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-12 md:mt-0 flex justify-center hidden md:flex">
+                <i data-lucide="hammer" class="w-48 h-48 text-blue-800 opacity-50"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center justify-center gap-2">
+                <i data-lucide="info" class="text-orange-500"></i> Sobre a Empresa
+            </h2>
+            <div class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+                <p class="mb-4">
+                    Bem-vindo à <strong>A M LEITE CONSTRUÇÃO</strong>. Somos uma empresa dedicada a fornecer materiais de construção da mais alta qualidade para obras de todos os portes. Desde pequenas reformas até grandes construções, nossa missão é ser o parceiro ideal do seu projeto.
+                </p>
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-8 inline-block shadow-sm">
+                    <p class="font-semibold text-blue-900 mb-2">Dados da Empresa</p>
+                    <p class="text-md"><strong>Razão Social:</strong> A M LEITE CONSTRUÇÃO</p>
+                    <p class="text-md"><strong>CNPJ:</strong> 45.895.400/0001-40</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos (Sem Fotos) -->
+    <section id="produtos" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4 flex items-center justify-center gap-2">
+                    <i data-lucide="package" class="text-orange-500"></i> Nossos Produtos
+                </h2>
+                <p class="text-gray-600">Confira nossa tabela de preços atualizada. Materiais de primeira linha para sua obra.</p>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-orange-500 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Cimento CP II</h3>
+                            <i data-lucide="box" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Saco de 50kg. Ideal para uso geral na construção civil.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">A partir de</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 35,90</p>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-600 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Tijolo Baiano (8 furos)</h3>
+                            <i data-lucide="bricks" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Milheiro. Alta resistência e excelente acabamento.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Valor do Milheiro</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 850,00</p>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-orange-500 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Areia Fina/Média</h3>
+                            <i data-lucide="mountain" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Metro cúbico. Areia lavada de excelente qualidade para reboco e assentamento.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Valor por M³</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 120,00</p>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-600 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Pedra Brita 1</h3>
+                            <i data-lucide="layers" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Metro cúbico. Essencial para a fabricação de concreto.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Valor por M³</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 130,00</p>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-orange-500 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Argamassa ACIII</h3>
+                            <i data-lucide="layers-3" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Saco de 20kg. Alta aderência e flexibilidade para porcelanatos.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Unidade</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 28,50</p>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-600 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Telha Cerâmica</h3>
+                            <i data-lucide="home" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Milheiro (Modelo Portuguesa ou Romana). Proteção e beleza para o telhado.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Valor do Milheiro</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 1.200,00</p>
+                    </div>
+                </div>
+
+                <!-- Produto 7 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-orange-500 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Tinta Acrílica Branca</h3>
+                            <i data-lucide="paint-bucket" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Lata 18 Litros. Rendimento superior, acabamento fosco.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Unidade</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 189,90</p>
+                    </div>
+                </div>
+
+                <!-- Produto 8 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-600 hover:shadow-xl transition-shadow flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Tubo PVC Esgoto 100mm</h3>
+                            <i data-lucide="pipette" class="text-gray-400"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Barra de 6 metros. Linha esgoto série normal.</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Unidade</p>
+                        <p class="text-2xl font-black text-blue-900">R$ 45,00</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-10 text-center">
+                <p class="text-sm text-gray-500 italic">* Valores sujeitos a alteração sem aviso prévio. Consulte disponibilidade e taxas de entrega.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Informações de Contato -->
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Entre em Contato</h2>
+                    <p class="text-gray-600 mb-8">Faça um orçamento sem compromisso ou tire suas dúvidas com nossa equipe. Estamos prontos para atender você!</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-orange-100 p-3 rounded-full text-orange-500">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">E-mail</p>
+                                <a href="mailto:amleiteconstrucao@gmail.com" class="text-lg font-bold text-blue-900 hover:text-orange-500 transition-colors">amleiteconstrucao@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-100 p-3 rounded-full text-blue-600">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">CNPJ</p>
+                                <p class="text-lg font-bold text-blue-900">45.895.400/0001-40</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
+                    <form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">Nome Completo</label>
+                            <input class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" id="nome" type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">E-mail</label>
+                            <input class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" id="email" type="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="mensagem">Mensagem / Lista de Orçamento</label>
+                            <textarea class="shadow-sm appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent h-32 resize-none" id="mensagem" placeholder="Descreva os materiais que você precisa..." required></textarea>
+                        </div>
+                        <button class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded transition-colors flex justify-center items-center gap-2" type="submit">
+                            <i data-lucide="send" class="w-5 h-5"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i data-lucide="hard-hat" class="h-6 w-6 text-orange-500"></i>
+                <span class="font-bold text-xl">A M LEITE CONSTRUÇÃO</span>
+            </div>
+            <div class="text-gray-400 text-sm text-center md:text-left">
+                <p>CNPJ: 45.895.400/0001-40 | <a href="mailto:amleiteconstrucao@gmail.com" class="hover:text-white transition-colors">amleiteconstrucao@gmail.com</a></p>
+                <p class="mt-1">&copy; 2026 Todos os direitos reservados.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Voltar ao topo <i data-lucide="arrow-up" class="inline w-4 h-4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicialização dos Ícones e Scripts -->
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // Controle do Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar em um link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
